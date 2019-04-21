@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>这是标题 on My New Hugo Site</title>
-    <link>http://wqq_hust.github.io/</link>
+    <link>http://GEOwuGRAwuPHY.github.io/</link>
     <description>Recent content in 这是标题 on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Apr 2019 15:47:02 +0800</lastBuildDate>
     
-	<atom:link href="http://wqq_hust.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://GEOwuGRAwuPHY.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>哈哈</title>
-      <link>http://wqq_hust.github.io/post/first/</link>
+      <link>http://GEOwuGRAwuPHY.github.io/post/first/</link>
       <pubDate>Sun, 21 Apr 2019 16:14:33 +0800</pubDate>
       
-      <guid>http://wqq_hust.github.io/post/first/</guid>
+      <guid>http://GEOwuGRAwuPHY.github.io/post/first/</guid>
       <description>这个真难弄哦</description>
     </item>
     
