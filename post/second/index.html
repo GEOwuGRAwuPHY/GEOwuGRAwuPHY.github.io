@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>关于部分测试题的解答 - My New Hugo Site</title>
+    <meta property="og:title" content="关于部分测试题的解答 - My New Hugo Site">
+    
+    <meta name="twitter:card" content="summary">
+
+    
+      
+    
+
+    
+      
+      <meta property="description" content="题目地址
+[&amp;hellip;] 主要概念定义：
+[&amp;hellip;] rumor cascades：同一个消息来源被不断的转发扩散而形成的传言扩散模式
+eg:就同一个消息，一个人进行转发，其他人在此基础上转发评论，由此形成一个rumor cascades，另一个人独立于此进行转发评论，那么就形成了两个rumor cascades。转发数量决定rumor cascades的规模；用户基于同一事件单独 &amp;hellip;">
+      <meta property="og:description" content="题目地址
+[&amp;hellip;] 主要概念定义：
+[&amp;hellip;] rumor cascades：同一个消息来源被不断的转发扩散而形成的传言扩散模式
+eg:就同一个消息，一个人进行转发，其他人在此基础上转发评论，由此形成一个rumor cascades，另一个人独立于此进行转发评论，那么就形成了两个rumor cascades。转发数量决定rumor cascades的规模；用户基于同一事件单独 &amp;hellip;">
+      
+    
+
+    
+    
+    <meta name="twitter:image" content="https://github.com/GEOwuGRAwuPHY/markdown-pictures/blob/master/1.png?raw=true">
+    
+    
+
+    
+
+    
+    
+
+
+
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+  <body class="post">
+    <header class="masthead">
+      <h1><a href="/">My New Hugo Site</a></h1>
+
+
+
+      <nav class="menu">
+  <input id="menu-check" type="checkbox" />
+  <label id="menu-label" for="menu-check" class="unselectable">
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <ul>
+  
+  
+  <li><a href="/post/">Post</a></li>
+  
+  
+  </ul>
+</nav>
+
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>关于部分测试题的解答</h1>
+
+<h3>吴琪琦
+  /  2019-06-29</h3>
+<hr>
+
+
+      </header>
+
+
+
+
+
+<h1 id="测试题一">测试题一</h1>
+
+<h2 id="题目内容">题目内容</h2>
+
+<p><a href="http://wiki.swarma.net/index.php/%E5%A6%82%E4%BD%95%E5%9F%B9%E5%85%BB%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%3F#.E6.B5.8B.E8.AF.95.E9.A2.98">题目地址</a></p>
+
+<ul>
+<li>根据论文<a href="http://wiki.swarma.net/index.php/The_spread_of_true_and_false_news_online">The spread of true and false news online</a>上面的图A1得到数据结构，编写python代码绘制图A2-5</li>
+</ul>
+
+<h2 id="题目理解">题目理解</h2>
+
+<ul>
+<li><strong>研究缘起</strong>：科技快速发展，但是没有研究表明科技究竟如何助长了谣言的传播；以往对于谣言的传播多限于对单一谣言的研究，而对于谣言的传播机制究竟与真相的传播有何不同没有过多的涉及。</li>
+<li><strong>研究数据来源</strong>：2006至2017年发布在推特上的rumor cascades，大约有126000条传言被近三百万人传播。研究中的数据由六个独立的事实核查机构的信息来判定消息的真假，它们的判定结果有着95-98%的一致性。</li>
+<li><strong>研究发现</strong>：谣言传播的广度（涉及传播人数）远远高于真相传播的人群；谣言传播的速度也快于真相的传播</li>
+
+<li><p>主要概念定义：</p>
+
+<ul>
+<li><p><strong>rumor cascades</strong>：同一个消息来源被不断的转发扩散而形成的传言扩散模式</p>
+
+<p><em>eg:就同一个消息，一个人进行转发，其他人在此基础上转发评论，由此形成一个rumor cascades，另一个人独立于此进行转发评论，那么就形成了两个rumor cascades。转发数量决定rumor cascades的规模；用户基于同一事件单独发帖的次数决定了级联的层数</em></p>
+
+<p><em>eg:如果10个人分别发了有关传言A的帖子，但是没有人转发，那么传言A就有10个层级，每个层级的规模为1。同样，如果2个人分别发了关于传言B的帖子，每个帖子都分别有100个人转发，那么传言B就有2个层级，每个层级的规模为100。</em></p></li>
+
+<li><p><strong>depth</strong>:原帖被一个新的用户转发的次数（被之前已经转发过的用户第二次、第三次…等转发的次数不算在内）</p></li>
+
+<li><p><strong>max-breadth</strong>:任一cascades所涉及的最多的用户数（用户数最多的那个级联的用户数量）</p></li>
+
+<li><p><strong>size</strong>:所有cascades总共涉及的用户数</p></li>
+
+<li><p><strong>structural virality</strong>:这是一种插入内容之中的测度，这些内容通过单一的庞大消息源或者多层级模式传播——在这种模式中每个个体的直接参与都是整个传播的一部分(即任意两次分享之间的平均距离）</p></li>
+</ul>
+
+<p><strong><em>(具体计算方法可参考文献：<a href="http://www.cnki.com.cn/Article/CJFDTotal-XDCB201608027.htm">《在线社交媒体信息传播效果的结构性扩散度》</a>）</em></strong>
+<img src="https://github.com/GEOwuGRAwuPHY/markdown-pictures/blob/master/1.png?raw=true" alt="" /></p></li>
+</ul>
+
+<p><em>由于题目内容中所附带的链接中不包含图例的数据集内容，且不包含关于A2-A5图的代码，因此针对图例人为生成了数据集</em></p>
+
+<p><em>针对节点进行了编号，数据集格式采用了时间戳，源节点，目标节点的格式，在不进行传播的时间里，源节点及目标节点编号设置为-1，-1</em></p>
+
+<p><strong><em>数据集内容如下所示</em></strong></p>
+
+<pre><code>1,0,1
+2,-1,-1
+3,0,2
+4,1,3
+5,-1,-1
+6,2,4
+7,2,5
+8,-1,-1
+9,-1,-1
+10,3,6
+11,2,7
+</code></pre>
+
+<h2 id="代码实现">代码实现</h2>
+
+<p><em>这是我的代码</em></p>
+
+<pre><code>import os
+import matplotlib.pyplot as plt
+#A2
+def calc_depth():
+    with open (r'input.txt','r') as f:
+        x=[0]
+        y=[0]
+        depth=0
+        node_depth={0:0}#第几个节点的depth
+        lines=f.readlines()
+        for line in lines:
+            r=line.split(',')
+            time=int(r[0])
+            src=int(r[1])
+            tgt=int(r[2].split('\n')[0])
+            if src!=-1:
+                node_depth[tgt]=node_depth[src]+1
+                if node_depth[tgt]&lt;depth:#说明该node之前已经传播过，不是一个新的用户的传播
+                    depth=depth
+                else:
+                    depth=node_depth[tgt]  
+            x.append(time)
+            y.append(depth)
+        plt.xlabel('Time(minute)')
+        plt.ylabel('Depth')
+        plt.plot(x,y,c='red')
+        plt.show()
+        f.close()
+#A3
+def calc_size():
+    with open (r'input.txt','r') as f:
+        x=[0]
+        y=[1]
+        size=1
+        lines=f.readlines()
+        for line in lines:
+            r=line.split(',')
+            time=int(r[0])
+            src=int(r[1])
+            tgt=int(r[2].split('\n')[0])
+            if src!=-1:
+                size=size+1
+            x.append(time)
+            y.append(size)
+        plt.xlabel('Time(minute)')
+        plt.ylabel('Size')
+        plt.plot(x,y,c='red')
+        plt.show()
+        f.close()
+#A4
+def calc_max_breadth():
+    with open (r'input.txt','r') as f:
+        max_breadth=0
+        x=[0]
+        y=[0]
+        node_son={0:0}#第几个节点有多少个子节点
+        lines=f.readlines()
+        for line in lines:
+            r=line.split(',')
+            time=int(r[0])
+            src=int(r[1])
+            tgt=int(r[2].split('\n')[0])
+            if src!=-1:
+                node_son[src]=node_son[src]+1
+                node_son[tgt]=0
+                if node_son[src]&lt;max_breadth:
+                    max_breadth=max_breadth
+                else:
+                    max_breadth=node_son[src]
+            x.append(time)
+            y.append(max_breadth)
+        plt.xlabel('Time(minute)')
+        plt.ylabel('max_breadth')
+        plt.plot(x,y,c='red')
+        plt.show()
+        f.close()
+#A5
+def calc_structural_virality():
+    with open (r'input.txt','r')as f:
+        x=[0]
+        y=[0]
+        slides=[[0]]#建立二维数组用来收集任一两个节点之间的距离，slide[i][j]表示节点i到j的距离，分为i&lt;j 和i&gt;j两部分
+        sum_distance=0
+        node_num=1#当前时间内集群中总共的节点数量
+        lines=f.readlines()
+        for line in lines:
+            r=line.split(',')
+            time=int(r[0])
+            src=int(r[1])
+            tgt=int(r[2].split('\n')[0])
+            if src!=-1:
+                slides.append([])
+                for i in range(0,node_num):
+                    if src&gt;i:
+                        slides[node_num].append(slides[src][i]+1)
+                    else:
+                        slides[node_num].append(slides[i][src]+1)
+                slides[node_num].append(0)#节点到自己的距离
+                sum_distance=sum_distance+sum(slides[node_num])
+                node_num=node_num+1
+            structural_virality=(sum_distance/((node_num)*(node_num-1)))*2
+            x.append(time)
+            y.append(structural_virality)
+        plt.xlabel('Time(minute)')
+        plt.ylabel('structural_virality')
+        plt.plot(x,y,c='r')
+        plt.show()
+        f.close()
+if __name__=='__main__':
+    calc_depth()
+    calc_size()
+    calc_max_breadth()
+    calc_structural_virality()
+</code></pre>
+
+<h1 id="测试题二">测试题二</h1>
+
+<h2 id="题目内容-1">题目内容</h2>
+
+<p><a href="http://wiki.swarma.net/index.php/%E5%A6%82%E4%BD%95%E5%9F%B9%E5%85%BB%E7%A1%95%E5%A3%AB%E7%A0%94%E7%A9%B6%E7%94%9F%3F#.E6.B5.8B.E8.AF.95.E9.A2.98">题目地址</a></p>
+
+<ul>
+<li>阅读以下三篇文献，整理出采用平均场方法对BA网络模型的推导过程</li>
+</ul>
+
+<p><a href="https://science.sciencemag.org/content/286/5439/509">Barabási, Albert-László; Albert, Réka. (October 15, 1999). &ldquo;Emergence of scaling in random networks&rdquo;. Science. 286 (5439): 509–512.</a></p>
+
+<p><a href="https://dl.acm.org/citation.cfm?id=933363">R. Albert, A.-L. Barabási. Statistical mechanics of complex networks. Reviews of Modern Physics 74, 47-97 (2002)</a></p>
+
+<p><a href="https://arxiv.org/abs/cond-mat/0104131">H. Jeong - Z. Néda - A. L. Barabási (2003) Measuring preferential attachment for evolving networks. Europhys. Lett., 61 (4), p. 567</a></p>
+
+<h2 id="题目理解-1">题目理解</h2>
+
+<p><strong>基本信息</strong></p>
+
+<ul>
+<li><p>优先链接：某节点有越多的链接，那么在新节点加入时，它被链接的概率就越大。</p></li>
+
+<li><p>优先链接是一种幂律分布</p>
+
+<ul>
+<li><p>首先假设其是一种线性分布，通过4个eg当中所包含的数据进行计算，证明其与超过线性发展的速度，呈现出一种幂律分布。</p>
+
+<p><em>eg:演员之间相顾连接的链路</em></p>
+
+<p><em>eg:万维网一个文档和另一个文档之间通过链接相互链接</em></p>
+
+<p><em>eg:美国电网发电机通过高压输电线进行链接</em></p>
+
+<p><em>eg:论文通过引用进行连接的网络</em></p></li>
+</ul></li>
+
+<li><p>优先链接与加入时间长短的关系</p>
+
+<ul>
+<li>为了验证优先链接究竟是依赖于K还是节点加入的时间T,在论证的过程中将T=1，采用积分的形式进行验证与计算。</li>
+</ul></li>
+</ul>
+
+<h2 id="模型推导">模型推导</h2>
+
+<p>假设网络中共有n个节点，一个新节点连接到其中一个节点的概率为1/n,度为k的这部分节点连接到其中一个节点的概率为k/n</p>
+
+<p>假设最开始有m0个节点，每t时间会增加一个节点，每个节点携带m个边，2m个度</p>
+
+<p>所以随着t的增加，网络中不断变化的节点数为m0+t*1，度数为2mt，老节点与新节点都分得其中m个度</p>
+
+<p>由上可知：</p>
+
+<p><img src="https://github.com/GEOwuGRAwuPHY/markdown-pictures/blob/master/2.png?raw=true" alt="" /></p>
+
+
+  <footer>
+  
+  
+
+
+
+<script src="//cdn.bootcss.com/highlight.js//highlight.min.js"></script>
+
+
+
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+  
+  </footer>
+  </article>
+  
+  </body>
+</html>
+
